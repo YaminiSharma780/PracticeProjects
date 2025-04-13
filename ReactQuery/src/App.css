@@ -1,0 +1,177 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  color: white;
+  background-color: black;
+  width: 100%;
+}
+
+.main-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.posts-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-bottom: 20px;
+}
+
+.create-post-container {}
+
+.tag-container {
+  overflow: visible;
+  /* background-color: #424141; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-input {
+  width: 100%;
+  height: 30px;
+}
+
+form {
+  overflow: hidden;
+}
+
+.tag {
+  width: 80px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: black;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag input {
+  cursor: pointer;
+}
+
+.post-card {
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upper-card-container {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.lower-card-container {
+  padding: 10px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.tags-array {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 14px;
+  color: #f1f1f1;
+}
+
+.tags {
+  color: rgb(4, 186, 252);
+}
+
+label {
+  color: rgb(4, 186, 252);
+}
+
+.post-btn {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+  height: 40px;
+}
+
+.prev-btn {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  width: 60px;
+  height: 30px;
+}
+
+.next-btn {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  width: 60px;
+  height: 30px;
+}
+
+.curr-btn {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  padding: 6px;
+  margin: 5px;
+}
+
+@media (max-width: 900px) {
+  .products-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .tag-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .tag-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+}
+
+@media (max-width: 375px) {
+  .products-container {
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .tag-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+}
